@@ -1,3 +1,11 @@
+.container{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(30,1fr);
+  grid-template-rows: repeat(10,1fr);
+  flex-direction:column;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -8,31 +16,289 @@ a {
   color: white;
   text-decoration: none;
 }
-
-.opera-house {
-  position: absolute;
-  width: 50%;
-}
-
-.foundation-stairs {
-  background-color: #D39F6F;
-  left: 140px;
-  height: 50px;
-  clip-path: polygon(100% 0, 30% 100%, 100% 100%);
-  position: relative;
-}
-
-.water {
-  height: 33vh;
-  background-color: #527B9B;
+/*  heft hand side garden*/
+.trees1{
+  grid-row: 7;
+  grid-column: 1/2;
+  background-color:#4A8739;
+  height: 100%;
   width: 100%;
-  position: fixed;
-  bottom: 0;
+  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+  z-index: 2;
+  box-shadow: inset 14px 9px 30px #43544F;
+}
+
+
+.trees2{
+  grid-row: 7;
+  grid-column: 2/3;
+  background-color:#4A8739;
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+  z-index: 2;
+  box-shadow: inset 14px 9px 30px #43544F;
+}
+.trees3{
+  grid-row: 7;
+  grid-column: 3/4;
+  background-color:#4A8739;
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+  z-index: 2;
+  box-shadow: inset 14px 9px 30px #43544F;
+}
+.trees4{
+  grid-row: 6/8;
+  grid-column: 1/4;
+  background-color:#205426;
+  height: 80%;
+  width: 100%;
+  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+  box-shadow: inset 14px 9px 30px #000;
+}
+
+.ground {
+  grid-row:8/11;
+  grid-column: 1/4;
+  background-color: #205426;
+  height:12%;
+  width: 100%;
+  align-items: top;
+  transform:translateY(-22px);
+}
+
+/* opera house */
+.foundation-stairs {
+  grid-row: 7;
+  grid-column: 5/7;
+  background-color: #D39F6F;
+  height:80%;
+  width:100%;
+  clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
 }
 
 .foundation {
-  width: 300px;
-  height: 15px;
+  grid-row:8/11;
+  grid-column: 4/15;
   background-color: #D39F6F;
-  position: relative;
+  height:12%;
+  width: 100%;
+  align-items: top;
+  transform:translateY(-22px);
+}
+
+.foundation-lhs {
+  grid-row: 7;
+  grid-column: 6/11;
+  background-color: #D39F6F;
+  height:80%;
+  width:100%;
+  z-index: 20;
+}
+
+.foundation-rhs {
+  grid-row: 7;
+  grid-column: 11/13;
+  background-color: #D39F6F;
+  height:80%;
+  width:100%;
+  clip-path:polygon(45% 0%, 100% 30%, 100% 100%, 30% 100%, 0 100%, 0% 5%);
+  z-index: 5;
+}
+
+.front-tent{
+  grid-row: 7;
+  grid-column: 13/15;
+  background-color: #FFF;
+  height:70%;
+  width:100%;
+  clip-path: polygon(27% 67%, 100% 88%, 100% 100%, 50% 100%, 0 100%, 0 72%);
+}
+
+.lhs-arch1{
+  width:75%;
+  height: 100%;
+  background-color:#000;
+  grid-row: 6;
+  grid-column: 6/8;
+  clip-path: polygon(0 1%, 100% 0%, 100% 100%, 27% 100%);
+  border-top-right-radius: 100%;
+}
+
+.lhs-arch2{
+  width:100%;
+  height: 100%;
+  background-color:#FFF;
+  grid-row: 6;
+  grid-column: 6/8;
+  clip-path: polygon(0 1%, 100% 0%, 100% 100%, 40% 100%);
+  border-top-right-radius: 100%;
+  z-index: 6;
+  transform: scale(1.2);
+}
+
+.lhs-arch3{
+  width:80%;
+  height: 95%;
+  background-color:#fff;
+  grid-row: 6;
+  grid-column: 6/8;
+  clip-path: polygon(0 1%, 100% 0%, 100% 100%, 40% 100%);
+  border-top-right-radius: 100%;
+  padding-top: 4px;
+  z-index: 8;
+  transform:translateX(70px);
+  border:1px solid #000;
+}
+.lhs-arch4{
+  width:75%;
+  height: 100%;
+  background-color:#000;
+  grid-row: 6;
+  grid-column: 6/8;
+  clip-path: polygon(0 1%, 100% 0%, 100% 100%, 20% 100%);
+  border-top-right-radius: 100%;
+  transform:translateX(70px);
+  z-index: 7
+}
+
+.rhs-arch1{
+  width:90%;
+  height: 100%;
+  background-color:#fff;
+  grid-row: 5/7;
+  grid-column: 8/11;
+  border-top-left-radius: 100%;
+  clip-path:polygon(100% 1%, 84% 60%, 75% 100%, 0% 100%, 10% 6%);
+  z-index: 1;
+  transform:translateX(15px);
+  border:1px solid #000;
+  transform:scale(1.1);
+}
+.rhs-arch2{
+  width:60%;
+  height: 100%;
+  background-color:#000;
+  grid-row: 5/7;
+  grid-column: 8/11;
+  border-top-left-radius: 100%;
+  clip-path:polygon(100% 1%, 84% 60%, 75% 100%, 0% 100%, 10% 6%);
+  z-index: 0;
+  transform:translateX(58px);
+  border:1px solid #000;
+}
+
+.rhs-arch3{
+  width:80%;
+  height: 100%;
+  background-color:#fff;
+  grid-row: 5/7;
+  grid-column: 9/13;
+  border-top-left-radius: 100%;
+  clip-path:polygon(100% 1%, 84% 60%, 75% 100%, 0% 100%, 10% 6%);
+  transform:translateX(15px);
+  border:1px solid #000;
+  z-index: 3;
+}
+
+.rhs-arch4{
+  width:80%;
+  height: 100%;
+  background-color:#000;
+  grid-row: 5/7;
+  grid-column: 9/13;
+  border-top-left-radius: 100%;
+  clip-path:polygon(100% 2%, 84% 60%, 75% 100%, 0% 100%, 10% 6%);
+  transform:translateX(19px);
+  border:1px solid #000;
+}
+
+.rhs-arch5{
+  width:80%;
+  height: 75%;
+  background-color:#fff;
+  grid-row: 5/7;
+  grid-column: 10/14;
+  border-top-left-radius: 100%;
+  clip-path:polygon(100% 2%, 84% 60%, 75% 100%, 0% 100%, 10% 6%);
+  transform:translateY(42px);
+  border:1px solid #000;
+  z-index: 6;
+}
+
+.rhs-arch6{
+  width:66%;
+  height: 75%;
+  background-color:#000;
+  grid-row: 5/7;
+  grid-column: 10/15;
+  border-top-left-radius: 100%;
+  clip-path:polygon(100% 2%, 84% 60%, 75% 100%, 0% 100%, 10% 6%);
+  transform:translateY(42px);
+  border:1px solid #000;
+  z-index: 5;
+}
+/*  ////////////////////////////////////   */
+
+/* bridge */
+
+.bridge-deck{
+  grid-row: 6;
+  grid-column: 1/31;
+  height:20%;
+  width:100%;
+  background-color:#434554;
+}
+
+.bridge-arch {
+    grid-row: 1/6;
+    grid-column: 11/32;
+    border-top-left-radius: 100%;
+    clip-path: polygon(100% 0%, 84% 60%, 100% 100%, 0% 100%, 10% 6%);
+    transform: translateY(42px);
+    border: 20px solid #434554;
+}
+
+.bridge-arch2 {
+    grid-row: 2/6;
+    grid-column: 12/32;
+    border-top-left-radius: 100%;
+    clip-path: polygon(100% 0%, 84% 60%, 100% 100%, 0% 100%, 10% 6%);
+    transform: translateY(42px);
+    border: 10px solid #434554;
+}
+
+.steel{
+  grid-row: 2/7;
+  grid-column: 19/20;
+  background-color: #434554;
+  height: 100%;
+  width: 20%;
+  transform: scale(.75);
+}
+
+.steel1{
+  grid-row: 3/7;
+  grid-column: 15/16;
+  background-color: #434554;
+  height: 100%;
+  width: 20%;
+  transform: scale(.70);
+}
+.steel2{
+  grid-row: 2/7;
+  grid-column: 17/18;
+  background-color: #434554;
+  height: 100%;
+  width: 20%;
+  transform: scale(.75);
+}
+
+.water {
+  background-color: #527B9B;
+  grid-row: 8/11;
+  grid-column: 1/31;
+  height:100%;
 }
