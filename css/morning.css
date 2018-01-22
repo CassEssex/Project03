@@ -428,11 +428,22 @@ a {
 /* bridge */
 
 .blinking-bill{
-  grid-row: 1;
-  grid-column: 28;
+  grid-row: 2;
+  grid-column: 29;
   background-color: red;
   width: 50%;
-  height:50%;
+  height:60%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  transform: translateY(-63px);
+  animation-name: blinking;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blinking {
+  from {background-color: red;}
+  to {background-color: #000; }
 }
 
 .bridge-deck{
