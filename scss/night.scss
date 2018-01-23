@@ -21,7 +21,7 @@ a {
 .moon {
   position: absolute;
 	top:50px;
-	left:50px;
+	left:175px;
 	margin: auto;
 	width:100px;
 	height:100px;
@@ -321,7 +321,7 @@ a {
   border-top-right-radius: 50%;
   transform: translateY(-63px);
   animation-name: blinking;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
 }
 

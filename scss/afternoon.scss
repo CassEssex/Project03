@@ -7,6 +7,29 @@
   height:780px;
 }
 
+@mixin tree-basic{
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+  z-index: 2;
+  box-shadow: inset 14px 9px 30px #43544F;
+  background-color:#4A8739;
+}
+
+@mixin water-shape{
+  height: 80%;
+  animation-name: waves;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@mixin water-shape2{
+  height: 60%;
+  animation-name: waves;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -133,11 +156,7 @@ a {
   grid-row: 7;
   grid-column: 1/2;
   background-color:#4A8739;
-  height: 100%;
-  width: 100%;
-  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
-  z-index: 2;
-  box-shadow: inset 14px 9px 30px #43544F;
+  @include tree-basic;
 }
 .trees1a{
   grid-row: 7;
@@ -153,12 +172,7 @@ a {
 .trees2{
   grid-row: 7;
   grid-column: 2/3;
-  background-color:#4A8739;
-  height: 100%;
-  width: 100%;
-  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
-  z-index: 2;
-  box-shadow: inset 14px 9px 30px #43544F;
+  @include tree-basic;
 }
 
 .trees2a{
@@ -174,12 +188,7 @@ a {
 .trees3{
   grid-row: 7;
   grid-column: 3/4;
-  background-color:#4A8739;
-  height: 100%;
-  width: 100%;
-  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
-  z-index: 2;
-  box-shadow: inset 14px 9px 30px #43544F;
+  @include tree-basic;
 }
 .trees3a{
   grid-row: 7;
@@ -213,7 +222,7 @@ a {
   z-index: 20;
 }
 
-/* opera house */
+/* opera house *//////////////
 .foundation-stairs {
   grid-row: 7;
   grid-column: 5/7;
@@ -285,18 +294,6 @@ a {
   z-index: 6;
   transform: scale(1.2);
 }
-.lhs-arch2s{
-  /* width:60%;
-  height: 107%;
-  background-color:#D3CE57;
-  grid-row: 6;
-  grid-column: 6/9;
-  clip-path: polygon(0 1%, 100% 0%, 100% 100%, 40% 100%);
-  border-top-right-radius: 75%;
-  z-index: 6;
-  transform: scale(0.5);
-  opacity: 0.5; */
-}
 
 .lhs-arch3{
   width:80%;
@@ -337,19 +334,6 @@ a {
   transform:scale(1.1);
 }
 
-.rhs-arch1s{
-  /* width: 103%;
-  height: 110%;
-  background-color: #D3CE57;
-  grid-row: 5/7;
-  grid-column: 8/10;
-  border-top-left-radius: 100%;
-  clip-path: polygon(100% -6%, 82% 60%, 70% 100%, -8% 62%, -55% -19%);
-  z-index: 1;
-  opacity: 0.5;
-  transform: scale(0.7); */
-}
-
 .rhs-arch2{
   width:60%;
   height: 100%;
@@ -374,19 +358,6 @@ a {
   transform:translateX(15px);
   border:1px solid #000;
   z-index: 3;
-}
-
-.rhs-arch3s{
-  /* width:81%;
-  height: 115%;
-  background-color:#D3CE57;
-  grid-row: 5/7;
-  grid-column: 9/13;
-  border-top-left-radius: 100%;
-  clip-path:polygon(100% 1%, 84% 60%, 75% 100%, 0% 100%, 10% 6%);
-  opacity: 0.5;
-  transform:scale(.6);
-  z-index: 3; */
 }
 
 .rhs-arch4{
@@ -440,7 +411,7 @@ a {
   border-top-right-radius: 50%;
   transform: translateY(-63px);
   animation-name: blinking;
-  animation-duration: 4s;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
 }
 
@@ -696,7 +667,9 @@ a {
     to   {transform: translateY(1px);transform: translateY(-1px); }
 }
 
-/* water  */
+/* water  *////////////
+
+
 .water {
   background-color: #527B9B;
   grid-row: 8/11;
@@ -709,21 +682,16 @@ a {
   grid-column: 1/15;
   background-color:#70A7D3;
   border-radius:0 0 50% 50%;
-  height: 60%;
-  animation-name: waves;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+  @include water-shape;
   z-index: 4;
 }
+
 .ripple-lightblue2{
   grid-row: 8/9;
   grid-column: 15/31;
   background-color:#70A7D3;
   border-radius:0 0 50% 50%;
-  height: 80%;
-  animation-name: waves;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+  @include water-shape;
   z-index: 4;
 }
 
@@ -732,54 +700,43 @@ a {
   grid-column: 1/7;
   background-color:#476B87;
   border-radius:0 0 50% 50%;
-  height: 80%;
-  animation-name: waves;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+  @include water-shape;
   transform: translateY(-55px);
 }
+
 .ripple-darkblue2{
   grid-row: 9;
   grid-column: 7/15;
   background-color:#476B87;
   border-radius:0 0 50% 50%;
-  height: 80%;
-  animation-name: waves;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+  @include water-shape;
   transform: translateY(-55px);
 }
+
 .ripple-darkblue3{
   grid-row: 9;
   grid-column: 15/22;
   background-color:#476B87;
   border-radius:0 0 50% 50%;
-  height: 80%;
-  animation-name: waves;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+  @include water-shape;
   transform: translateY(-55px);
 }
+
 .ripple-darkblue4{
   grid-row: 9;
   grid-column: 22/32;
   background-color:#476B87;
   border-radius:0 0 50% 50%;
-  height: 80%;
-  animation-name: waves;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+  @include water-shape;
   transform: translateY(-55px);
 }
+
 .ripple-white{
   grid-row: 8/9;
   grid-column: 1/2;
   background-color:#476B87;
   border-radius:0 0 50% 50%;
-  height: 60%;
-  animation-name: waves;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
+  @include water-shape2;
   z-index: 5;
 }
 
@@ -788,10 +745,7 @@ a {
   grid-column: 1/15;
   background-color:#70A7D3;
   border-radius:0 0 50% 50%;
-  height: 60%;
-  animation-name: waves;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+  @include water-shape2;
   z-index: 4;
 }
 .ripple-lightblue4{
@@ -799,10 +753,7 @@ a {
   grid-column: 15/31;
   background-color:#70A7D3;
   border-radius:0 0 50% 50%;
-  height: 80%;
-  animation-name: waves;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+  @include water-shape;
   z-index: 4;
 }
 
@@ -811,10 +762,7 @@ a {
   grid-column: 1/7;
   background-color:#476B87;
   border-radius:0 0 50% 50%;
-  height: 80%;
-  animation-name: waves;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+  @include water-shape;
   transform: translateY(-55px);
 }
 .ripple-darkblue6{
@@ -822,10 +770,7 @@ a {
   grid-column: 7/15;
   background-color:#476B87;
   border-radius:0 0 50% 50%;
-  height: 80%;
-  animation-name: waves;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+  @include water-shape;
   transform: translateY(-55px);
 }
 .ripple-darkblue7{
@@ -834,9 +779,7 @@ a {
   background-color:#476B87;
   border-radius:0 0 50% 50%;
   height: 80%;
-  animation-name: waves;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+  @include water-shape;
   transform: translateY(-55px);
 }
 .ripple-darkblue8{
@@ -844,10 +787,7 @@ a {
   grid-column: 22/32;
   background-color:#476B87;
   border-radius:0 0 50% 50%;
-  height: 80%;
-  animation-name: waves;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+  @include water-shape;
   transform: translateY(-55px);
 }
 .ripple-white{
@@ -855,10 +795,7 @@ a {
   grid-column: 1/2;
   background-color:#476B87;
   border-radius:0 0 50% 50%;
-  height: 60%;
-  animation-name: waves;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
+  @include water-shape2;
   z-index: 5;
 }
 @keyframes waves {

@@ -16,6 +16,20 @@
   background-color:#4A8739;
 }
 
+@mixin water-shape{
+  height: 80%;
+  animation-name: waves;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@mixin water-shape2{
+  height: 60%;
+  animation-name: waves;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -30,7 +44,7 @@ a {
 .sun {
   position: absolute;
 	top:50px;
-	left:50px;
+	left:165px;
 	margin: auto;
 	width:70px;
 	height:70px;
@@ -257,7 +271,7 @@ a {
   z-index: 20;
 }
 
-/* opera house */
+/* opera house */////////////////////
 .foundation-stairs {
   grid-row: 7;
   grid-column: 5/7;
@@ -484,7 +498,7 @@ a {
   border-top-right-radius: 50%;
   transform: translateY(-63px);
   animation-name: blinking;
-  animation-duration: 4s;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
 }
 
@@ -739,21 +753,7 @@ a {
     to   {transform: translateY(1px);transform: translateY(-1px); }
 }
 
-/* water  */
-@mixin water-shape{
-  height: 80%;
-  animation-name: waves;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-}
-
-@mixin water-shape2{
-  height: 60%;
-  animation-name: waves;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-}
-
+/* water  *////////////
 .water {
   background-color: #527B9B;
   grid-row: 8/11;
@@ -810,6 +810,7 @@ a {
   @include water-shape;
   transform: translateY(-55px);
 }
+
 .ripple-white{
   grid-row: 8/9;
   grid-column: 1/2;
