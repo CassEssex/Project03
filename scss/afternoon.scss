@@ -39,27 +39,45 @@ body {
 a {
   color: white;
   text-decoration: none;
+
 }
+
+.afternoon1{
+  grid-row: 1/11;
+  grid-column: 1/32;
+  background: linear-gradient(to bottom right, #0F7FD3, yellow);
+}
+
+
+
+// shark ////////////////////////
 
 .shark {
   clip-path: polygon(0 0, 10% 100%, 100% 100%);
   background-color: #B1C4D3;
-  grid-row: 9;
-  grid-column: 4;
-  z-index: 20;
+  grid-row: 8;
+  grid-column: 1;
+  z-index: 9;
+  position: relative;
   box-shadow: inset 23px 12px 15px #43544F;
   border-top-left-radius: 50%;
   animation-name: shark;
-  animation-duration: 4s;
+  animation-duration: 15s;
   animation-iteration-count: infinite;
 }
 
+@keyframes shark {
+  from {left: -300px;}
+  to {left: 1800px;}
+  from {left: -300px; grid-row: 8;}
+  to {left: 1800px; grid-row: 9; transform:scale(1.3);}
+  }
 
+// sun /////////////////////////////
 .sun {
   position: absolute;
 	top:300px;
 	right:50px;
-
 	margin: auto;
 	width:70px;
 	height:70px;
@@ -67,6 +85,7 @@ a {
 	background:#D3CE57;
 	opacity:0.9;
 	box-shadow: 0px 0px 40px 15px white;
+  z-index: 5;
 }
 
 .ray_box {
@@ -79,6 +98,7 @@ a {
   width:70px;
   -webkit-animation: ray_anim 120s linear infinite;
   animation: ray_anim 120s linear infinite;
+  z-index: 5;
 }
 .ray {
     background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
@@ -87,6 +107,7 @@ a {
     border-radius:80% 80% 0 0;
     position:absolute;
     opacity:0.1;
+    z-index: 5;
 }
 
 .ray1 {
@@ -95,6 +116,7 @@ a {
    -webkit-transform: rotate(180deg);
     top:-175px;
     left: 15px;
+    z-index: 5;
 }
 .ray2 {
     height:100px;
@@ -102,6 +124,7 @@ a {
    -webkit-transform: rotate(220deg);
     top:-90px;
     left: 75px;
+    z-index: 5;
 }
 .ray3 {
     height:170px;
@@ -109,6 +132,7 @@ a {
    -webkit-transform: rotate(250deg);
     top:-80px;
     left: 100px;
+    z-index: 5;
 }
 .ray4 {
     height:120px;
@@ -116,6 +140,7 @@ a {
    -webkit-transform: rotate(305deg);
     top:30px;
     left: 100px;
+    z-index: 5;
 }
 .ray5 {
     height:140px;
@@ -123,6 +148,7 @@ a {
    -webkit-transform: rotate(-15deg);
     top:60px;
     left: 40px;
+    z-index: 5;
 }
 .ray6 {
     height:90px;
@@ -130,6 +156,7 @@ a {
    -webkit-transform: rotate(30deg);
     top:60px;
     left: -40px;
+    z-index: 5;
 }
 .ray7 {
     height:180px;
@@ -137,6 +164,7 @@ a {
    -webkit-transform: rotate(70deg);
     top:-35px;
     left: -40px;
+    z-index: 5;
 }
 .ray8 {
     height:120px;
@@ -144,6 +172,7 @@ a {
    -webkit-transform: rotate(100deg);
     top:-45px;
     left:-90px;
+    z-index: 5;
 }
 .ray9 {
     height:80px;
@@ -151,6 +180,7 @@ a {
    -webkit-transform: rotate(120deg);
     top:-65px;
     left:-60px;
+    z-index: 5;
 }
 .ray10 {
     height:190px;
@@ -158,6 +188,7 @@ a {
    -webkit-transform: rotate(150deg);
     top:-185px;
     left: -60px;
+    z-index: 5;
 }
 
 @-webkit-keyframes ray_anim {
@@ -171,6 +202,7 @@ a {
   grid-column: 1/2;
   background-color:#4A8739;
   @include tree-basic;
+  z-index: 19;
 }
 .trees1a{
   grid-row: 7;
@@ -179,7 +211,7 @@ a {
   height: 129%;
   width: 100%;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  z-index: 3;
+  z-index: 20;
   transform:scale(.5);
 }
 
@@ -187,6 +219,7 @@ a {
   grid-row: 7;
   grid-column: 2/3;
   @include tree-basic;
+  z-index: 19;
 }
 
 .trees2a{
@@ -196,13 +229,14 @@ a {
   height: 129%;
   width: 100%;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  z-index: 3;
+  z-index: 20;
   transform:scale(.5);
 }
 .trees3{
   grid-row: 7;
   grid-column: 3/4;
   @include tree-basic;
+  z-index: 19;
 }
 .trees3a{
   grid-row: 7;
@@ -211,7 +245,7 @@ a {
   height: 129%;
   width: 100%;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  z-index: 3;
+  z-index: 20;
   transform:scale(.5);
 }
 
@@ -223,6 +257,7 @@ a {
   width: 100%;
   clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
   box-shadow: inset 14px 9px 30px #000;
+  z-index: 18;
 }
 
 .ground {
@@ -244,7 +279,7 @@ a {
   height:80%;
   width:100%;
   clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
-  z-index: 20;
+  z-index: 35;
 }
 
 .foundation {
@@ -255,7 +290,7 @@ a {
   width: 100%;
   align-items: top;
   transform:translateY(-22px);
-  z-index: 20;
+  z-index: 35;
 }
 
 .foundation-lhs {
@@ -264,7 +299,7 @@ a {
   background-color: #D39F6F;
   height:80%;
   width:100%;
-  z-index: 20;
+  z-index: 37;
 }
 
 .foundation-rhs {
@@ -274,7 +309,7 @@ a {
   height:80%;
   width:100%;
   clip-path:polygon(45% 0%, 100% 30%, 100% 100%, 30% 100%, 0 100%, 0% 5%);
-  z-index: 20;
+  z-index: 35;
 }
 
 .front-tent{
@@ -285,6 +320,7 @@ a {
   width:100%;
   clip-path: polygon(27% 67%, 100% 88%, 100% 100%, 50% 100%, 0 100%, 0 72%);
   border: 2px solid black;
+  z-index: 35;
 }
 
 .lhs-arch1{
@@ -295,6 +331,7 @@ a {
   grid-column: 6/8;
   clip-path: polygon(0 1%, 100% 0%, 100% 100%, 27% 100%);
   border-top-right-radius: 100%;
+  z-index: 35;
 }
 
 .lhs-arch2{
@@ -307,6 +344,7 @@ a {
   border-top-right-radius: 100%;
   z-index: 6;
   transform: scale(1.2);
+  z-index: 35;
 }
 
 .lhs-arch3{
@@ -318,9 +356,9 @@ a {
   clip-path: polygon(0 1%, 100% 0%, 100% 100%, 40% 100%);
   border-top-right-radius: 100%;
   padding-top: 4px;
-  z-index: 8;
   transform:translateX(70px);
   border:1px solid #000;
+  z-index: 37;
 }
 .lhs-arch4{
   width:75%;
@@ -331,7 +369,7 @@ a {
   clip-path: polygon(0 1%, 100% 0%, 100% 100%, 20% 100%);
   border-top-right-radius: 100%;
   transform:translateX(70px);
-  z-index: 7
+  z-index: 35;
 }
 
 .rhs-arch1{
@@ -342,7 +380,7 @@ a {
   grid-column: 8/11;
   border-top-left-radius: 100%;
   clip-path:polygon(100% 1%, 84% 60%, 75% 100%, 0% 100%, 10% 6%);
-  z-index: 1;
+  z-index: 36;
   transform:translateX(15px);
   border:2px solid #000;
   transform:scale(1.1);
@@ -356,7 +394,7 @@ a {
   grid-column: 8/11;
   border-top-left-radius: 100%;
   clip-path:polygon(100% 1%, 84% 60%, 75% 100%, 0% 100%, 10% 6%);
-  z-index: 0;
+  z-index: 33;
   transform:translateX(58px);
   border:2px solid #000;
 }
@@ -368,10 +406,10 @@ a {
   grid-row: 5/7;
   grid-column: 9/13;
   border-top-left-radius: 100%;
-  clip-path:polygon(100% -6%, 82% 60%, 70% 100%, -8% 62%, -55% -19%);
+  clip-path:polygon(100% -1%, 82% 56%, 75% 151%, -34% 62%, -55% -19%);
   transform:translateX(15px);
   border:1px solid #000;
-  z-index: 3;
+  z-index: 36;
 }
 
 .rhs-arch4{
@@ -384,6 +422,7 @@ a {
   clip-path:polygon(100% 2%, 84% 60%, 75% 100%, 0% 100%, 10% 6%);
   transform:translateX(19px);
   border:1px solid #000;
+  z-index: 34;
 }
 
 .rhs-arch5{
@@ -396,7 +435,7 @@ a {
   clip-path:polygon(100% 2%, 84% 60%, 75% 100%, 0% 100%, 10% 6%);
   transform:translateY(42px);
   border:1px solid #000;
-  z-index: 6;
+  z-index: 39;
 }
 
 .rhs-arch6{
@@ -409,7 +448,7 @@ a {
   clip-path:polygon(100% 2%, 84% 60%, 75% 100%, 0% 100%, 10% 6%);
   transform:translateY(42px);
   border:1px solid #000;
-  z-index: 5;
+  z-index: 14;
 }
 /*  ////////////////////////////////////   */
 
@@ -440,6 +479,7 @@ a {
   height:20%;
   width:100%;
   background-color:#434554;
+  z-index: 15;
 }
 
 .bridge-arch {
@@ -449,6 +489,7 @@ a {
     clip-path: polygon(100% 0%, 84% 60%, 100% 100%, 0% 100%, 10% 6%);
     transform: translateY(42px);
     border: 20px solid #434554;
+    z-index: 15;
 }
 
 .bridge-arch2 {
@@ -458,6 +499,7 @@ a {
     clip-path: polygon(100% 0%, 84% 60%, 100% 100%, 0% 100%, 10% 6%);
     transform: translateY(42px);
     border: 10px solid #434554;
+    z-index: 15;
 }
 
 .steelv1{
@@ -468,6 +510,7 @@ a {
   width: 26%;
   transform: scale(.83);
   transform: translateY(32px);
+  z-index: 15;
 }
 
 .steel{
@@ -477,6 +520,7 @@ a {
   height: 100%;
   width: 34%;
   transform: scale(.75);
+  z-index: 15;
 }
 
 .steel1{
@@ -486,6 +530,7 @@ a {
   height: 100%;
   width: 26%;
   transform: translateY(-37px);
+  z-index: 15;
 }
 .steel2 {
     grid-row: 3/6;
@@ -494,6 +539,7 @@ a {
     height: 109%;
     width: 26%;
     transform: translateY(7px);
+    z-index: 15;
 }
 
 .steel3 {
@@ -503,6 +549,7 @@ a {
   height: 99%;
   width: 33%;
   transform: scale(0.83);
+  z-index: 15;
 }
 
 .steel4 {
@@ -512,7 +559,7 @@ a {
   height: 90%;
   width: 26%;
   transform: scale(0.95);
-  z-index: 7;
+  z-index: 15;
 }
 .steel5 {
   grid-row: 2/7;
@@ -520,7 +567,7 @@ a {
   background-color: #434554;
   height: 90%;
   width: 26%;
-  z-index: 7;
+  z-index: 15;
 }
 
 .steel6 {
@@ -530,6 +577,7 @@ a {
   height: 90%;
   width: 26%;
   transform: translateY(-11px);
+  z-index: 15;
 }
 
 .steel7 {
@@ -539,6 +587,7 @@ a {
   height: 90%;
   width: 26%;
   transform: translateY(-15px);
+  z-index: 15;
 }
 /* ///////////////////////////////////////////// */
 
