@@ -41,6 +41,20 @@ a {
   text-decoration: none;
 }
 
+.shark {
+  clip-path: polygon(0 0, 10% 100%, 100% 100%);
+  background-color: #B1C4D3;
+  grid-row: 9;
+  grid-column: 4;
+  z-index: 20;
+  box-shadow: inset 23px 12px 15px #43544F;
+  border-top-left-radius: 50%;
+  animation-name: shark;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+
 .sun {
   position: absolute;
 	top:300px;
