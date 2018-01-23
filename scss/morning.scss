@@ -67,11 +67,11 @@ body {
   grid-column: 1/6;
   text-shadow: 0 5px 10px rgba(0,0,0,.25),  0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
   position:relative;
-  animation-name: example;
+  animation-name: flag;
   animation-duration: 10s;
   animation-iteration-count: infinite;
 }
-@keyframes example {
+@keyframes flag {
   from {left: -300px;}
   to {left: 1800px;}
 }
@@ -82,7 +82,7 @@ body {
   grid-row: 3;
   grid-column: 5/6;
   position:relative;
-  animation-name: example;
+  animation-name: flag;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   transform:translateY(-43px);
@@ -95,7 +95,7 @@ body {
   grid-row: 3;
   grid-column: 6/7;
   position:relative;
-  animation-name: example;
+  animation-name: flag;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   transform: scale(2.5);
@@ -106,7 +106,7 @@ body {
   grid-row: 3;
   grid-column: 8;
   position:relative;
-  animation-name: example;
+  animation-name: flag;
   animation-duration: 10s;
   animation-iteration-count: infinite;
 clip-path: polygon(19% 41%, 19% 53%, 41% 53%, 26% 99%, 37% 99%, 54% 46%, 37% 0, 28% 0, 41% 41%);
