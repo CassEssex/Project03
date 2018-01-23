@@ -11,9 +11,78 @@ body {
   padding: 0;
   background-color: #3C92D3; }
 
-a {
+.morning {
   color: white;
-  text-decoration: none; }
+  text-decoration: none;
+  font-size: 30px;
+  grid-row: 1;
+  grid-column: 1/6; }
+
+.night {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  grid-row: 3;
+  grid-column: 1/6; }
+
+.afternoon {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  grid-row: 2;
+  grid-column: 1/6; }
+
+.css-city {
+  font-family: 'Maven Pro', sans-serif;
+  color: white;
+  font-size: 50px;
+  grid-row: 3;
+  grid-column: 1/6;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  animation-name: example;
+  animation-duration: 10s;
+  animation-iteration-count: infinite; }
+
+@keyframes example {
+  from {
+    left: -300px; }
+  to {
+    left: 1800px; } }
+.plane-tail {
+  background-color: white;
+  clip-path: polygon(0 0, 43% 0, 83% 100%, 0% 100%);
+  grid-row: 3;
+  grid-column: 5/6;
+  position: relative;
+  animation-name: example;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  transform: translateY(-43px);
+  box-shadow: inset 23px 12px 15px #43544F; }
+
+.plane-body {
+  background-color: white;
+  clip-path: polygon(66% 38%, 100% 38%, 100% 60%, 68% 60%, 0% 38%);
+  grid-row: 3;
+  grid-column: 6/7;
+  position: relative;
+  animation-name: example;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  transform: scale(2.5);
+  box-shadow: inset 31px 30px 22px #43544F; }
+
+.plane-prop {
+  background-color: white;
+  grid-row: 3;
+  grid-column: 8;
+  position: relative;
+  animation-name: example;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  clip-path: polygon(19% 41%, 19% 53%, 41% 53%, 26% 99%, 37% 99%, 54% 46%, 37% 0, 28% 0, 41% 41%);
+  transform: translateX(-25px); }
 
 .sun {
   position: absolute;
