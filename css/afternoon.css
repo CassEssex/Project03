@@ -13,12 +13,61 @@ body {
 
 a {
   color: white;
-  text-decoration: none; }
+  text-decoration: none;
+  font-family: 'Maven Pro', sans-serif; }
+
+.morning {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  grid-row: 1;
+  grid-column: 2;
+  z-index: 20; }
+
+.afternoon {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  grid-row: 1;
+  grid-column: 3;
+  z-index: 20; }
+
+.night {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  grid-row: 1;
+  grid-column: 4/5;
+  z-index: 20; }
 
 .afternoon1 {
   grid-row: 1/11;
   grid-column: 1/32;
   background: linear-gradient(to bottom right, #0F7FD3, yellow); }
+
+.parachute {
+  grid-row: 1;
+  grid-column: 8/10;
+  background-color: red;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  box-shadow: inset 14px 9px 30px #000; }
+
+.parachute-shape {
+  grid-row: 1;
+  grid-column: 8/10;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 25px;
+  padding-top: 32px;
+  color: white; }
+
+.parachute-string {
+  clip-path: polygon(0 0, 100% 0, 65% 100%, 34% 100%);
+  grid-row: 2;
+  grid-column: 8/10;
+  border: 10px solid black; }
 
 .shark {
   clip-path: polygon(0 0, 10% 100%, 100% 100%);
@@ -53,7 +102,7 @@ a {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background: #D3CE57;
+  background: white;
   opacity: 0.9;
   box-shadow: 0px 0px 40px 15px white;
   z-index: 5; }
@@ -488,7 +537,7 @@ a {
   background-color: #434554;
   height: 100%;
   width: 26%;
-  transform: translateY(-37px);
+  transform: translateY(-32px);
   z-index: 15; }
 
 .steel2 {

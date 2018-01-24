@@ -36,28 +36,42 @@ body {
   background-color: #3C92D3;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Maven Pro', sans-serif;
+}
+
 .morning {
   color: white;
   text-decoration: none;
   font-size: 30px;
   grid-row: 1;
-  grid-column: 1/6;
+  grid-column: 2;
+  z-index: 20;
+  // transform:rotate(45deg);
+}
+
+.afternoon {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  grid-row: 1;
+  grid-column: 3;
+  z-index: 20;
+  // transform:rotate(45deg);
 }
 
 .night {
   color: white;
   text-decoration: none;
   font-size: 30px;
-  grid-row: 3;
-  grid-column: 1/6;
+  grid-row: 1;
+  grid-column: 4/5;
+  z-index: 20;
+  // transform:rotate(45deg);
 }
-.afternoon {
-  color: white;
-  text-decoration: none;
-  font-size: 30px;
-  grid-row: 2;
-  grid-column: 1/6;
-}
+
 
 .css-city{
   font-family: 'Maven Pro', sans-serif;
@@ -109,14 +123,14 @@ body {
   animation-name: flag;
   animation-duration: 10s;
   animation-iteration-count: infinite;
-clip-path: polygon(19% 41%, 19% 53%, 41% 53%, 26% 99%, 37% 99%, 54% 46%, 37% 0, 28% 0, 41% 41%);
+  clip-path: polygon(19% 41%, 19% 53%, 41% 53%, 26% 99%, 37% 99%, 54% 46%, 37% 0, 28% 0, 41% 41%);
   transform:translateX(-25px);
 }
 
 .sun {
   position: absolute;
-	top:50px;
-	left:165px;
+	top:100px;
+	left:200px;
 	margin: auto;
 	width:70px;
 	height:70px;

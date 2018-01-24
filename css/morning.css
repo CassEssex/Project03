@@ -11,26 +11,34 @@ body {
   padding: 0;
   background-color: #3C92D3; }
 
+a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Maven Pro', sans-serif; }
+
 .morning {
   color: white;
   text-decoration: none;
   font-size: 30px;
   grid-row: 1;
-  grid-column: 1/6; }
-
-.night {
-  color: white;
-  text-decoration: none;
-  font-size: 30px;
-  grid-row: 3;
-  grid-column: 1/6; }
+  grid-column: 2;
+  z-index: 20; }
 
 .afternoon {
   color: white;
   text-decoration: none;
   font-size: 30px;
-  grid-row: 2;
-  grid-column: 1/6; }
+  grid-row: 1;
+  grid-column: 3;
+  z-index: 20; }
+
+.night {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  grid-row: 1;
+  grid-column: 4/5;
+  z-index: 20; }
 
 .css-city {
   font-family: 'Maven Pro', sans-serif;
@@ -86,8 +94,8 @@ body {
 
 .sun {
   position: absolute;
-  top: 50px;
-  left: 165px;
+  top: 100px;
+  left: 200px;
   margin: auto;
   width: 70px;
   height: 70px;

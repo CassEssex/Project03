@@ -7,6 +7,16 @@
   height:780px;
 }
 
+@mixin star {
+  background-color: yellow;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  transform:scale(.2);
+  animation-name: stary-night;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+
 body {
   margin: 0;
   padding: 0;
@@ -16,16 +26,39 @@ body {
 a {
   color: white;
   text-decoration: none;
+    font-family: 'Maven Pro', sans-serif;
 }
 
-@mixin star {
-  background-color: yellow;
-  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-  transform:scale(.2);
-  animation-name: stary-night;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+.morning {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  grid-row: 1;
+  grid-column: 2;
+  z-index: 20;
+  // transform:rotate(45deg);
 }
+
+.afternoon {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  grid-row: 1;
+  grid-column: 3;
+  z-index: 20;
+  // transform:rotate(45deg);
+}
+
+.night {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  grid-row: 1;
+  grid-column: 4/5;
+  z-index: 20;
+  // transform:rotate(45deg);
+}
+
 
 .star1{
   grid-row: 3;
