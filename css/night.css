@@ -20,25 +20,64 @@ a {
   color: white;
   text-decoration: none;
   font-size: 30px;
-  grid-row: 1;
-  grid-column: 2;
-  z-index: 20; }
+  grid-row: 9;
+  grid-column: 3/5;
+  background-color: lightseagreen;
+  z-index: 20;
+  border-radius: 50%;
+  padding: 18px;
+  box-shadow: inset 23px 12px 15px #43544F; }
+
+.fish-tailam {
+  grid-row: 9;
+  grid-column: 4;
+  background-color: lightseagreen;
+  z-index: 19;
+  clip-path: polygon(100% 0, 0 48%, 100% 100%);
+  transform: translateX(21px);
+  box-shadow: inset 23px 12px 15px #43544F; }
 
 .afternoon {
   color: white;
   text-decoration: none;
   font-size: 30px;
-  grid-row: 1;
-  grid-column: 3;
-  z-index: 20; }
+  grid-row: 10;
+  grid-column: 14/16;
+  z-index: 20;
+  background-color: grey;
+  border-radius: 50%;
+  padding: 18px;
+  box-shadow: inset 23px 12px 15px black; }
+
+.fish-tailpm {
+  grid-row: 10;
+  grid-column: 15;
+  background-color: grey;
+  z-index: 19;
+  clip-path: polygon(100% 0, 0 48%, 100% 100%);
+  transform: translateX(21px);
+  box-shadow: inset 23px 12px 15px black; }
 
 .night {
   color: white;
   text-decoration: none;
   font-size: 30px;
-  grid-row: 1;
-  grid-column: 4/5;
-  z-index: 20; }
+  grid-row: 9;
+  grid-column: 24/26;
+  z-index: 20;
+  background-color: black;
+  border-radius: 50%;
+  padding: 18px;
+  box-shadow: inset 15px 12px 15px white; }
+
+.fish-tailnight {
+  grid-row: 9;
+  grid-column: 23/24;
+  background-color: grey;
+  z-index: 19;
+  clip-path: polygon(100% 49%, 0 0, 0 100%);
+  transform: translateX(21px);
+  box-shadow: inset 7px 21px 7px white; }
 
 .star1 {
   grid-row: 3;
